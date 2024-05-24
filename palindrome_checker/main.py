@@ -8,10 +8,11 @@ expressions = input.split('\n')
 
 for expression in expressions:
     # Removing non alphanumerical characters
-    expression =  re.sub(r'\W+', '', expression)
+    # expression =  re.sub(r'\W+', '', expression)
+    expression = ''.join(char.lower() for char in expression if char.isalnum())
 
     # Uppercasing expression
-    expression = expression.upper()
+    # expression = expression.upper()
 
     if expression and expression == expression[::-1]:
         print(f'YES, {len(set(expression))}')
