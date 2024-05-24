@@ -1,7 +1,7 @@
 import re
 
 # with open('./input.txt', 'r') as f:
-with open('./palindrome_checker/input.txt', 'r') as f:
+with open('./input.txt', 'r') as f:
     input = f.read()
 
 # Storing expressions in a list
