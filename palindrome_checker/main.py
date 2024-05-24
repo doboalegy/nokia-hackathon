@@ -1,4 +1,20 @@
-with open('./input.txt', 'r') as f:
-  input = f.read()
+import re
 
-print(input)
+# with open('./input.txt', 'r') as f:
+with open('./palindrome_checker/input.txt', 'r') as f:
+    input = f.read()
+
+# Storing expressions in a list
+expressions = input.split('\n')
+
+for expression in expressions:
+    #Removing non numerical characters
+    expression =  re.sub(r'\W+', '', expression)
+
+    #Uppercasing expression
+    expression = expression.upper()
+
+    if expression == expression[::-1]:
+        print(f'YES, {len(set(expression))}')
+    else:
+        print('NO, -1')
