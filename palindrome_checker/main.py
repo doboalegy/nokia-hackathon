@@ -8,13 +8,13 @@ with open('./input.txt', 'r') as f:
 expressions = input.split('\n')
 
 for expression in expressions:
-    #Removing non numerical characters
+    # Removing non alphanumerical characters
     expression =  re.sub(r'\W+', '', expression)
 
-    #Uppercasing expression
+    # Uppercasing expression
     expression = expression.upper()
 
-    if expression == expression[::-1]:
+    if (len(expression) != 0) and (expression == expression[::-1]):
         print(f'YES, {len(set(expression))}')
     else:
         print('NO, -1')
