@@ -14,7 +14,7 @@ for expression in expressions:
     # Uppercasing expression
     expression = expression.upper()
 
-    if (len(expression) != 0) and (expression == expression[::-1]):
+    if expression and (expression == expression[::-1]):
         print(f'YES, {len(set(expression))}')
     else:
         print('NO, -1')
