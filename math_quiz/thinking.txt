@@ -113,3 +113,26 @@ e)
 =====================================
 Legnagyobb Térfogat: 8 * 8 * 8 = 512
 =====================================
+
+3) Jancsi és Juliska a tőlük 20 km-re levő mézeskalácsházhoz igyekszik. Kettejüknek van egy biciklijük, amin egyszerre csak egyikük tud ülni. Elhatározták, hogy először Jancsi fog gyalogolni, és Juliska biciklizik valameddig, ott leteszi a biciklit, majd gyalog megy tovább. Amikor Jancsi odaér, felszáll a biciklire, és elmegy vele a mézeskalácsházig. Jancsi 5 km/h sebességgel gyalogol és 12 km/h sebességgel biciklizik, Juliska 4 km/h sebességgel gyalogol, és 10 km/h sebességgel biciklizik. Hány km-t kell Juliskának bicikliznie, hogy egyszerre érjenek a mézeskalácsházhoz, ha egyszerre is indulnak el?
+
+Legyen 'x' az a távolság, amennyit Júliskának bicikliznie kell!
+
+START.........x km...........| BICIKLICSERE |........20-x km........HÁZ
+(Jancsi) -------[5km/h]----->                ------[12km/h]-------->
+(Juliska) -----[10km/h]----->                -------------->
+
+t(Jancsi) = s1(Jancsi) / v1(Jancsi) + s2(Jancsi) / v2(Jancsi) = x/5 + (20-x)/12
+t(Juliska) = s1(Juliska) / v1(Juliska) + s2(Juliska) / v2(Juliska) = x/10 + (20-x)/4
+
+t(Jancsi) = t(Juliska)
+x/5 + (20-x)/12 = x/10 + (20-x)/4 /szorzás a közös nevezövel (60)
+12x + 5*(20-x) = 6x + 15*(20-x) /zárójel bontás
+12x + 100 - 5x = 6x + 300 - 15x / + 9x - 100
+16x = 200 / :16
+
+x = 12.5
+
+=========================================
+* 12.5 km-t kell bicikliznie Juliskának *
+=========================================
