@@ -28,3 +28,88 @@ x = 100
 ==============================
 *100 méter a vonat sebessége.*
 ==============================
+
+2) Egy cukrász két 2 cm, egy 6 cm és egy 8 cm oldalélű marcipánkocka összeragasztásával egy nagyobb testet épített úgy, hogy egy-egy illesztésnél az egyik marcipánkocka teljes oldala ráfeküdt a másik kocka egy lapjára. A kész testből kivághatunk magunknak egy téglatestet, de csak olyan sík mentén vághatunk, amely illeszkedik valamelyik kocka lapjára. Mekkora a legnagyobb térfogatú marcipántégla, amit így kaphatunk (köbcentiméterben)?
+
+Próbálkozások (felülnézet):
+
+a) 
+*------------------------*-----------------------*
+|                        |                | 2cm3|
+|                        |                |_____|
+|         8cm3           |      6cm3      | 2cm3|
+|________________________|________________|_____|
+|                        |                |
+|                        |                |
+
+|                        |----------------*
+|                        |
+|                        |
+*------------------------*
+
+Térfogat: (8+6+2) * 2 * 4 = 128 cm3
+
+b)
+
+*------------------------*----------------*
+|                        |            |   |
+|                        |            |   |
+|         8cm3           |      6cm3  |   |
+|                        |            |   |
+|                        |            |   |
+|                        |            |   |
+|                        |----------------*
+|                        | 2cm  | 2cm |
+|                        |      |     |
+*------------------------*------*-----*
+
+Térfogat: (8 + 2 + 2) * (6 + 2) * 2 = 192cm3
+
+c)
+
+*------------------------*----------------*
+|                        |      |         |
+|                        |      |         |
+|         8cm3           |      6cm3      |
+|                        |      |         |
+|                        |      |         |
+|                        |      |         |
+|                        |----------------*
+|                        | 2cm  | <- ez alatt van a másik 2cm2-es
+|                        |      |
+*------------------------*------*
+
+Térfogat: (8 + 2) * (2 + 6) * (2 + 2) = 320 cm3
+
+d) 
+*------------------------*----------------*
+|                        |                |
+|                        |                |
+|         8cm3           |      6cm3      |
+|                        |                |
+|                        |                |
+|                        |                |
+|------------------------|----------------*
+|                        | 2cm  | 2cm |
+|                        |      |     |
+*------------------------*------*-----*
+
+Legnagyobb Térfogat: 6 * 6 * (8 + 6) = 504cm3
+
+e)
+
+*------------------------*----------------*
+|                        |                |
+|                        |                |
+|         8cm3           |      6cm3      |
+|                        |                |
+|    (Ennek a kockának   |                |
+|      a térfogata)      |                |
+|                        |----------------*
+|                        | 2cm  | 2cm |
+|                        |      |     |
+*------------------------*------*-----*
+
+=====================================
+Legnagyobb Térfogat: 8 * 8 * 8 = 512
+=====================================
