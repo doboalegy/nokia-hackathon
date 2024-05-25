@@ -38,7 +38,7 @@ class Maze:
 
 # Reading mazes from file
 mazes = {}
-with open('./maze_solver/input.txt', 'r') as f:
+with open('./input.txt', 'r') as f:
     key = ''
     matrix = []
 
