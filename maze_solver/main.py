@@ -1,3 +1,4 @@
+'''
 class Maze:
     def __init__(self, matrix):
         self.blocks = {}
@@ -70,3 +71,4 @@ for key, maze in mazes.items():
     else:
         raise Exception('No path found')
     print()
+'''
