@@ -136,3 +136,32 @@ x = 12.5
 =========================================
 * 12.5 km-t kell bicikliznie Juliskának *
 =========================================
+
+4) Egy koordinátarendszerben megrajzoltuk az origó középpontú, 5 egység s ugarú kört. Hány rácspont esik erre a körvonalra? (Rácspontnak nevezzük azokat a pontokat, melyeknek mindkét koordinátája egész szám.)
+
+Pitagorasz tétel: a^2 + b^2 = c^2
+
+Egy rácspont akkor van rajta a körvonalon, ha x és y koordinátájinak négyzetösszege 5^2:
+
+Négyzetszámok 0-tól 25-ig: 0; 1; 4; 9; 16; 25
+	-Ezekböl kell kirakni olyan párokat, melynek összege 25: 0 + 25; 9 + 16
+
+[0^2 + 5^2 = 25]
+(0, 5)
+(0, -5)
+(5, 0)
+(-5, 0)
+
+[3^2 + 4^2 = 25]
+(4, 3)
+(3, 4)
+(4, -3)
+(-3, 4)
+(-4, 3)
+(3, -4)
+(-3, -4)
+(-4, -3)
+
+============================
+*Összesen 12 ilyen pont van*
+============================
