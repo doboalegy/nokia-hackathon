@@ -5,23 +5,42 @@ def print_matrix(matrix : list):
 		print(' '.join(map(str, row)))
 
 def add_matrices(matrix1 : list, matrix2 : list) -> list:
-	matrix = []
-	for i in range(len(matrix1)):
-		matrix.append([])
-		for j in range(len(matrix1[0])):
-			matrix[i].append([])
-			matrix[i][j] = matrix1[i][j] + matrix2[i][j]
-	return matrix
+	result = [
+		[matrix1[i][j] + matrix2[i][j] for j in range(len(matrix1[0]))] for i in range(len(matrix1))
+		]
+
+	return result
+
+def multiply_matrices(matrix1 : list, matrix2 : list):
+    result = []
+
+    # Check if matrices can be multiplied
+    if len(matrix1[0]) != len(matrix2):
+        raise ValueError('Matrices cannot be multiplied: Invalid dimensions')
+    
+    # Iterate through rows of matrix1
+    for i in range(len(matrix1)):
+        row = []
+        # Iterate through columns of matrix2
+        for j in range(len(matrix2[0])):
+            sum = 0
+            # Iterate through rows of matrix2 to perform dot product
+            for k in range(len(matrix2)):
+                sum += matrix1[i][k] * matrix2[k][j]
+            row.append(sum)
+        result.append(row)
+    
+    return result
 
 
-with open('./input.txt') as f:
+with open('./matrix_operations/input.txt') as f:
 	matrices = {}
 	operations = []
 
 	key = ''
 	matrix = []
 
-	''' READING MATRIXES '''
+	''' READING MATRICES '''
 	line = f.readline()
 	while line:
 		# Stripping line
@@ -62,6 +81,20 @@ i = 0 # used to name new matrices
 for operation in operations:
 	# Printing operation
 	print(operation)
+
+	# Multiplications 
+	multiplications = re.findall(r'\w+\s\*\s\w+', operation)
+	while multiplications:
+
+		matrix_name = 'M' + str(i)
+		factors = multiplications[0].split(' * ')
+		matrices[matrix_name] = multiply_matrices(matrices[factors[0]], matrices[factors[1]])
+		
+		# Replacing operation with new matrix
+		operation = operation.replace(multiplications[0], matrix_name)
+
+		i += 1
+		multiplications = re.findall(r'\w+\s\*\s\w+', operation)
 
 	# Additions
 	additions = re.findall(r'\w+\s\+\s\w+', operation)
