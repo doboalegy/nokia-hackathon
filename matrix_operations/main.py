@@ -1,5 +1,5 @@
 # Reading input
-with open('./matrix_operations/input.txt', 'r') as f:
+with open('./input.txt', 'r') as f:
 	input = f.read().split('operations')
 
 # Storing matrixes
