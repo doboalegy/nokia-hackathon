@@ -33,7 +33,7 @@ def multiply_matrices(matrix1 : list, matrix2 : list):
     return result
 
 
-with open('./matrix_operations/input.txt') as f:
+with open('./input.txt') as f:
 	matrices = {}
 	operations = []
 
