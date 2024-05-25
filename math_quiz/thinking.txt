@@ -1,0 +1,30 @@
+1) Egy vonat állandó sebességgel halad át egy alagúton. 20 másodpercig tart, amíg a 300 m hosszú alagúton átér, onnantól, hogy az eleje eléri az alagút elejét, addig, amíg a vége el nem hagyja. Egy lámpa az alagútban pont 5 másodpercen át van a vonat felett. Milyen hosszú a vonat (méterben)?
+
+Legyen 'x' a vonat hossza!
+
+a)
+     __________(Alagút: 300m)__________
+|--->                                  |--->
+^ ez a vonat
+
+A vonat eleje (>) 20 mp alatt megtesz 300m + x távolságot
+    ==> A vonat sebessége: v= s/t = (300+x)/20
+
+b)
+-------*------- A * a lámpa, (pont szerü test)
+  |--->
+
+A vonat x távolságot tesz meg 5 másodperc alatt.
+    ==> A vonat sebessége: v= s/t = x/5
+
+a) és b) következtetések összevonása:
+
+(300+x)/20 = x/5 = v
+(300+x)/20 = x/5  /szorzás a közös nevezövel (20)
+300 + x = 4x // -x 
+300 = 3x
+x = 100
+
+==============================
+*100 méter a vonat sebessége.*
+==============================
