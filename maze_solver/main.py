@@ -1,3 +1,4 @@
+'''
 from collections import deque
 
 class Maze:
@@ -68,3 +69,4 @@ for key, maze in mazes.items():
         print(path)
         
     print()
+'''
