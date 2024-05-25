@@ -139,4 +139,3 @@ with open('./input.txt', 'r') as f:
 for key, maze in mazes.items():
     print(key)
     print(find_shortest_path(maze))
-    print()
