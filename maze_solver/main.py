@@ -66,3 +66,5 @@ for key, maze in mazes.items():
         print(path)
     else:
         print(path)
+        
+    print()
