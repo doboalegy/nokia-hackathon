@@ -1,4 +1,5 @@
-'''
+from collections import deque
+
 class Maze:
     def __init__(self, matrix):
         self.blocks = {}
@@ -13,36 +14,31 @@ class Maze:
                 elif matrix[i][j] == 'G':
                     self.goal = (i, j)
 
-    def explore(self, parent, block, actions, visited):
-        if block in visited:
-            return None
-        if block not in self.blocks or self.blocks[block] == '#':
-            return None
-        if self.blocks[block] == 'G':
-            return actions
-
-        visited.add(block)
-
-        neighbours = [
-            ((block[0] + 1, block[1]), 'D'),
-            ((block[0] - 1, block[1]), 'U'),
-            ((block[0], block[1] + 1), 'R'),
-            ((block[0], block[1] - 1), 'L')
-        ]
-
-        best_actions = None
-        for neighbour, action in neighbours:
-            if neighbour == parent:
-                continue
-            neighbour_actions = self.explore(block, neighbour, actions + action, visited.copy())
-            if neighbour_actions and (best_actions is None or len(neighbour_actions) < len(best_actions)):
-                best_actions = neighbour_actions
-
-        return best_actions
+    def bfs(self):
+        queue = deque([(self.start, '')])
+        visited = set()
+        visited.add(self.start)
+        
+        while queue:
+            current, actions = queue.popleft()
+            
+            if current == self.goal:
+                return actions
+            
+            for direction, (dx, dy) in zip('DURL', [(1, 0), (-1, 0), (0, 1), (0, -1)]):
+                neighbour = (current[0] + dx, current[1] + dy)
+                
+                if neighbour not in self.blocks or neighbour in visited or self.blocks[neighbour] == '#':
+                    continue
+                
+                visited.add(neighbour)
+                queue.append((neighbour, actions + direction))
+        
+        return None
 
 # Reading mazes from file
 mazes = {}
-with open('./input.txt', 'r') as f:
+with open('./maze_solver/input.txt', 'r') as f:
     key = ''
     matrix = []
 
@@ -65,10 +61,8 @@ with open('./input.txt', 'r') as f:
 
 for key, maze in mazes.items():
     print(key)
-    path = maze.explore(None, maze.start, 'S', set())
+    path = maze.bfs()
     if path:
-        print(path + 'G')
+        print(path)
     else:
-        raise Exception('No path found')
-    print()
-'''
+        print(path)
