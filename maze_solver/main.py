@@ -76,7 +76,7 @@ from collections import deque
 def find_shortest_path(maze):
     # Segédfüggvény a szomszédos cellák meghatározására
     def get_neighbors(x, y):
-        for dx, dy, direction in [(-1, 0, 'U'), (1, 0, 'D'), (0, -1, 'L'), (0, 1, 'R')]:
+        for dx, dy, direction in [(-1, 0, ' U'), (1, 0, ' D'), (0, -1, ' L'), (0, 1, ' R')]:
             nx, ny = x + dx, y + dy
             if 0 <= nx < len(maze) and 0 <= ny < len(maze[0]) and maze[nx][ny] != '#':
                 yield nx, ny, direction
@@ -103,7 +103,7 @@ def find_shortest_path(maze):
         
         # Ha elérte a célt, visszatérítjük az utat
         if (x, y) == goal:
-            return 'S' + path + 'G'
+            return 'S' + path + ' G'
         
         # Szomszédos cellák bejárása
         for nx, ny, direction in get_neighbors(x, y):
