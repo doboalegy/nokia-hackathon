@@ -70,3 +70,7 @@ for key, maze in mazes.items():
         
     print()
 '''
+with open('./input.txt', 'r') as f:
+    input = f.read()
+
+print(input)
