@@ -181,10 +181,3 @@ piros
 =====================
 10 db piros golyó van
 =====================
-
-23 kell mind3hoz:
-10 piros + 12 zöld/kék + 8 kék/zöld
-	zöldböl van a legtöbb ==> 10 piros + 12 zöld + 8 kék golyó van a dobozban
-
-
-
