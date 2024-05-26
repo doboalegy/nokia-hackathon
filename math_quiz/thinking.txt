@@ -171,7 +171,9 @@ Négyzetszámok 0-tól 25-ig: 0; 1; 4; 9; 16; 25
 
 7) Egy dobozban 30 egyforma nagyságú golyó van: pirosak, kékek és zöldek, mindegyikből különböző mennyiségű, zöldből van a legtöbb. Becsukott szemmel legalább 23 golyót kell kivennünk ahhoz, hogy biztosan legyen mindhárom színű golyó a kihúzottak között; illetve legalább 21 golyót, hogy biztosan legyen piros golyónk. Hány piros golyó van?
 
-zöld - legtöbb
+összesen 30 db
+
+zöld
 kék
 piros
 
@@ -181,3 +183,25 @@ piros
 =====================
 10 db piros golyó van
 =====================
+
+8) 1 cm oldalú kis négyzetekből összeraktunk egy nagyobbat. A nagy négyzet átlóiban álló kis négyzetek területének összege 85 négyzetcentiméter. Mekkora a nagy négyzet területe négyzetcentiméterben megadva?
+
+1 négyzet területe 1cm2
+1 négyzet átlója gyök(2) cm
+
+A nagy négyzet átlója 85*gyök(2)
+Legyen a nagy négyzet oldala x!
+
+x^2 + x^2 = (85*gyök(5) )^2
+2x^2 = 14450 / :2
+x^2 = 7224
+|x| = 85
+x1 = -85 <- nem lehet a nagy négyzet oldala negatív
+x2 = 85
+
+x = 85
+
+A nagy négyzet területe: 85^2 = 7225 cm2
+
+
+
