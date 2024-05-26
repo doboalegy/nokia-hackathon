@@ -203,5 +203,27 @@ x = 85
 
 A nagy négyzet területe: 85^2 = 7225 cm2
 
+9) Egy angol-magyar találkozó végén minden résztvevő elköszönt mindegyik másik résztvevőtől: az angolok mindenkinek egyesével ezt mondták: ,,Goodbye!'', míg a magyarok ezt: ,,Viszlát!'' Hányan angol vett részt a találkozón, ha 198-szor hangzott el az, hogy ,,Goodbye!'' és 308-szor az, hogy ,,Viszlát!''?
 
+Legyen x az társaság összes tagja!
 
+Mindenki köszön mindenkinek, kivéve önmagának;
+
+x * (x - 1) = 198 + 308
+
+x^2 - x - 506 = 0         [a = 1, b = -1, c = -506]
+	D= (-1)^2-4*1*(-506) = 2025
+	x1,2 = (1 +- 45) / 2
+	x1 = -22 < nem lehet -22 ember
+	x2 = 23
+
+Összesen 23-an vannak a társaságban
+
+Legyen y az angolok száma!
+
+y * 22 = 198 / :22
+y = 9
+
+================================
+9 angol vett részt a találkozón
+================================
