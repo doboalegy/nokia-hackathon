@@ -165,3 +165,26 @@ Négyzetszámok 0-tól 25-ig: 0; 1; 4; 9; 16; 25
 ============================
 *Összesen 12 ilyen pont van*
 ============================
+
+5) A koordináta-rendszerben az ABC háromszög csúcspontjai: A(0;4), B(3;0), C(c;6). A háromszög területe 7. Mekkora a c, ha tudjuk, hogy 0<c<3 ?
+
+
+7) Egy dobozban 30 egyforma nagyságú golyó van: pirosak, kékek és zöldek, mindegyikből különböző mennyiségű, zöldből van a legtöbb. Becsukott szemmel legalább 23 golyót kell kivennünk ahhoz, hogy biztosan legyen mindhárom színű golyó a kihúzottak között; illetve legalább 21 golyót, hogy biztosan legyen piros golyónk. Hány piros golyó van?
+
+zöld - legtöbb
+kék
+piros
+
+21 kell piroshoz => összes kék + összes zöld = 20 (a 21. már piros)
+Összesen 30 golyó van 30 - 20 = 10
+
+=====================
+10 db piros golyó van
+=====================
+
+23 kell mind3hoz:
+10 piros + 12 zöld/kék + 8 kék/zöld
+	zöldböl van a legtöbb ==> 10 piros + 12 zöld + 8 kék golyó van a dobozban
+
+
+
