@@ -168,6 +168,40 @@ Négyzetszámok 0-tól 25-ig: 0; 1; 4; 9; 16; 25
 
 5) A koordináta-rendszerben az ABC háromszög csúcspontjai: A(0;4), B(3;0), C(c;6). A háromszög területe 7. Mekkora a c, ha tudjuk, hogy 0<c<3 ?
 
+[A]
+x1 = 0
+y1 = 4
+
+[B]
+x2 = 3
+y2 = 0
+
+[C]
+x3 = c
+y3 = 6
+
+A háromszög területe: ​∣x1​(y2​−y3​) + x2​(y3​−y1​) + x3​(y1​−y2​)∣ / 2
+
+​∣x1​(y2​−y3​) + x2​(y3​−y1​) + x3​(y1​−y2​)∣ / 2 = 7
+|0(0-6) + 3(6-4) + c(4-0)| / 2 = 7
+|0 + 6 + 4c | / 2 = 7  / *2
+|6 + 4c| = 14
+
+a) 
+-(6 + 4c) = 14
+-6 - 4c = 14   / :-4
+-4c = 20
+c = -5 < nem eleme az értelmezési tartománynak
+
+b)
+6 + 4c = 14
+4c = 8
+c = 2
+
+=============
+A c értéke 2
+=============
+
 
 7) Egy dobozban 30 egyforma nagyságú golyó van: pirosak, kékek és zöldek, mindegyikből különböző mennyiségű, zöldből van a legtöbb. Becsukott szemmel legalább 23 golyót kell kivennünk ahhoz, hogy biztosan legyen mindhárom színű golyó a kihúzottak között; illetve legalább 21 golyót, hogy biztosan legyen piros golyónk. Hány piros golyó van?
 
