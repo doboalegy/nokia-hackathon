@@ -202,6 +202,8 @@ c = 2
 A c értéke 2
 =============
 
+6) Néhányan paintball-ütközetet vívnak egymással. Egy adott helyzetben egymástól való távolságaik mind különbözők. Ekkor mindenki rálő a hozzá legközelebb álló emberre. Legfeljebb hányan lőhetnek ugyanarra az emberre?
+
 
 7) Egy dobozban 30 egyforma nagyságú golyó van: pirosak, kékek és zöldek, mindegyikből különböző mennyiségű, zöldből van a legtöbb. Becsukott szemmel legalább 23 golyót kell kivennünk ahhoz, hogy biztosan legyen mindhárom színű golyó a kihúzottak között; illetve legalább 21 golyót, hogy biztosan legyen piros golyónk. Hány piros golyó van?
 
