@@ -1,9 +1,11 @@
 import re
 
+''' Mátrix kiírása'''
 def print_matrix(matrix : list):
 	for row in matrix:
 		print(' '.join(map(str, row)))
 
+''' Két mátrix összeadása'''
 def add_matrices(matrix1 : list, matrix2 : list) -> list:
 	result = [
 		[matrix1[i][j] + matrix2[i][j] for j in range(len(matrix1[0]))] for i in range(len(matrix1))
@@ -11,20 +13,18 @@ def add_matrices(matrix1 : list, matrix2 : list) -> list:
 
 	return result
 
+''' Két mátrix összeszorzása'''
 def multiply_matrices(matrix1 : list, matrix2 : list):
     result = []
 
-    # Check if matrices can be multiplied
+    # Mátrix szorzás szabályának ellenörzése
     if len(matrix1[0]) != len(matrix2):
-        raise ValueError('Matrices cannot be multiplied: Invalid dimensions')
+        raise ValueError('Matrices cannot be multiplied')
     
-    # Iterate through rows of matrix1
     for i in range(len(matrix1)):
         row = []
-        # Iterate through columns of matrix2
         for j in range(len(matrix2[0])):
             sum = 0
-            # Iterate through rows of matrix2 to perform dot product
             for k in range(len(matrix2)):
                 sum += matrix1[i][k] * matrix2[k][j]
             row.append(sum)
@@ -32,57 +32,59 @@ def multiply_matrices(matrix1 : list, matrix2 : list):
     
     return result
 
-
+'''INPUT'''
 with open('./input.txt') as f:
+	
+	# Ezekben a változókban tároljuk a mátrixokat és a müveleteket
 	matrices = {}
 	operations = []
 
+	''' Mátrixok beolvasása '''
 	key = ''
 	matrix = []
 
-	''' READING MATRICES '''
 	line = f.readline()
 	while line:
-		# Stripping line
+		# Sor strippelése
 		line = line.strip()
 		
-		if len(line) == 0: # empty line
+		if len(line) == 0: # Üres sor
 			pass
-		elif len(line) == 1: # new matrix
+		elif len(line) == 1: # Új mátrix
 			if matrix:
 				matrices[key] = matrix
 				matrix = []
 			key = line
-		elif line == 'operations': # starting operations
+		elif all(c.isdigit() or c.isspace() for c in line): # Ha a sor számokat és szóközeket tartalmaz
+			matrix.append(list(map(int, line.split())))
+		elif line == 'operations': # Müveletek kezdete
 			matrices[key] = matrix
 			break
-		elif all(c.isdigit() or c.isspace() for c in line): # If line contains digits and spaces
-			matrix.append(list(map(int, line.split())))
 
-		# Reading next line
+		# Következö sor
 		line = f.readline()
 	
-	''' READING OPERATIONS '''
+	''' Müveletek beolvasása '''
 	line = f.readline()
 	while line:
-		# Stripping line
+		# Sor strippelése
 		line = line.strip()
 
-		# Adding line to operations
+		# Hozzáadás a müveletekhez
 		if len(line) > 0:
 			operations.append(line)
 
-		# Reading next line
+		# Következö sor
 		line = f.readline()
 
 ''' MAIN '''
-i = 0 # used to name new matrices
+i = 0 # új mátrixok nevéhez használjuk
 
 for operation in operations:
-	# Printing operation
+	# Müvelet kiírása
 	print(operation)
 
-	# Multiplications 
+	# Szorzások 
 	multiplications = re.findall(r'\w+\s\*\s\w+', operation)
 	while multiplications:
 
@@ -90,13 +92,13 @@ for operation in operations:
 		factors = multiplications[0].split(' * ')
 		matrices[matrix_name] = multiply_matrices(matrices[factors[0]], matrices[factors[1]])
 		
-		# Replacing operation with new matrix
+		# Szorzás cseréje az új mátrixra
 		operation = operation.replace(multiplications[0], matrix_name)
 
 		i += 1
 		multiplications = re.findall(r'\w+\s\*\s\w+', operation)
 
-	# Additions
+	# Összeadások
 	additions = re.findall(r'\w+\s\+\s\w+', operation)
 	while additions:
 
@@ -104,13 +106,14 @@ for operation in operations:
 		addends = additions[0].split(' + ')
 		matrices[matrix_name] = add_matrices(matrices[addends[0]], matrices[addends[1]])
 		
-		# Replacing operation with new matrix
+		# Összeadás cseréje az új mátrixra
 		operation = operation.replace(additions[0], matrix_name)
 
 		i += 1
 		additions = re.findall(r'\w+\s\+\s\w+', operation)
 	
+	# Végleges mátrix kiírása
 	print_matrix(matrices['M' + str(i-1)])
 
-	# Empty line
+	# Üres sor
 	print()
