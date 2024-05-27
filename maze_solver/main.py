@@ -46,29 +46,28 @@ class Maze:
 
         raise Exception("Maze has no solution")
 
-# Store mazes in this dictionary
 mazes = {}
 
-with open('./maze_solver/input.txt', 'r') as f:
+with open('./input.txt', 'r') as f:
     key = ''
     matrix = []
 
     for line in f:
         row = line.strip().split()
 
-        # Skip empty lines
+        # Üres sorok kihagyás
         if not row:
             continue
 
-        if len(row) == 1: # New maze
+        if len(row) == 1: # Új útvesztö
             if key:
                 mazes[key] = Maze(matrix)
             key = row[0]
             matrix = []
-        else: # Expand current maze
+        else: # Jelenlegi útvesztö bövítése
             matrix.append(row)
 
-    # Add the last maze
+    # Utolsó útvesztö hozzáadása
     if key:
         mazes[key] = Maze(matrix)
 
