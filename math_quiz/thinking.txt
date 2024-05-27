@@ -7,7 +7,7 @@ a)
 |--->                                  |--->
 ^ ez a vonat
 
-A vonat eleje (>) 20 mp alatt megtesz 300m + x távolságot
+A vonat 20 mp alatt megtesz 300m + x távolságot
     ==> A vonat sebessége: v= s/t = (300+x)/20
 
 b)
@@ -21,7 +21,7 @@ a) és b) következtetések összevonása:
 
 (300+x)/20 = x/5 = v
 (300+x)/20 = x/5  /szorzás a közös nevezövel (20)
-300 + x = 4x // -x 
+300 + x = 4x  / -x 
 300 = 3x
 x = 100
 
@@ -120,7 +120,7 @@ Legyen 'x' az a távolság, amennyit Júliskának bicikliznie kell!
 
 START.........x km...........| BICIKLICSERE |........20-x km........HÁZ
 (Jancsi) -------[5km/h]----->                ------[12km/h]-------->
-(Juliska) -----[10km/h]----->                -------------->
+(Juliska) -----[10km/h]----->                ------[4km/h]--------->
 
 t(Jancsi) = s1(Jancsi) / v1(Jancsi) + s2(Jancsi) / v2(Jancsi) = x/5 + (20-x)/12
 t(Juliska) = s1(Juliska) / v1(Juliska) + s2(Juliska) / v2(Juliska) = x/10 + (20-x)/4
@@ -137,7 +137,9 @@ x = 12.5
 * 12.5 km-t kell bicikliznie Juliskának *
 =========================================
 
-4) Egy koordinátarendszerben megrajzoltuk az origó középpontú, 5 egység s ugarú kört. Hány rácspont esik erre a körvonalra? (Rácspontnak nevezzük azokat a pontokat, melyeknek mindkét koordinátája egész szám.)
+4) Egy koordinátarendszerben megrajzoltuk az origó középpontú, 5 egység sugarú kört. Hány rácspont esik erre a körvonalra? (Rácspontnak nevezzük azokat a pontokat, melyeknek mindkét koordinátája egész szám.)
+
+
 
 Pitagorasz tétel: a^2 + b^2 = c^2
 
@@ -189,7 +191,7 @@ A háromszög területe: ​∣x1​(y2​−y3​) + x2​(y3​−y1​) + x3�
 
 a) 
 -(6 + 4c) = 14
--6 - 4c = 14   / :-4
+-6 - 4c = 14   / +6 , :-4
 -4c = 20
 c = -5 < nem eleme az értelmezési tartománynak
 
@@ -214,7 +216,7 @@ kék
 piros
 
 21 kell piroshoz => összes kék + összes zöld = 20 (a 21. már piros)
-Összesen 30 golyó van 30 - 20 = 10
+Összesen 30 golyó van, 30 - 20 = 10
 
 =====================
 10 db piros golyó van
@@ -225,19 +227,21 @@ piros
 1 négyzet területe 1cm2
 1 négyzet átlója gyök(2) cm
 
-A nagy négyzet átlója 85*gyök(2)
+1 átlóban (85+1)/2 négyzet van = 43
+
+A nagy négyzet átlója 43*gyök(2)
 Legyen a nagy négyzet oldala x!
 
-x^2 + x^2 = (85*gyök(5) )^2
-2x^2 = 14450 / :2
-x^2 = 7224
-|x| = 85
-x1 = -85 <- nem lehet a nagy négyzet oldala negatív
-x2 = 85
+x^2 + x^2 = (43*gyök(2) )^2
+2x^2 = 3698 / :2
+x^2 = 1849
+|x| = 43
+x1 = -43 <- nem lehet a nagy négyzet oldala negatív
+x2 = 43
 
-x = 85
+x = 43
 
-A nagy négyzet területe: 85^2 = 7225 cm2
+A nagy négyzet területe: 43^2 = 1849 cm2
 
 9) Egy angol-magyar találkozó végén minden résztvevő elköszönt mindegyik másik résztvevőtől: az angolok mindenkinek egyesével ezt mondták: ,,Goodbye!'', míg a magyarok ezt: ,,Viszlát!'' Hányan angol vett részt a találkozón, ha 198-szor hangzott el az, hogy ,,Goodbye!'' és 308-szor az, hogy ,,Viszlát!''?
 

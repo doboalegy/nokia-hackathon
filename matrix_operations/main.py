@@ -14,7 +14,7 @@ def add_matrices(matrix1 : list, matrix2 : list) -> list:
 	return result
 
 ''' Két mátrix összeszorzása'''
-def multiply_matrices(matrix1 : list, matrix2 : list):
+def multiply_matrices(matrix1 : list, matrix2 : list) -> list:
     result = []
 
     # Mátrix szorzás szabályának ellenörzése

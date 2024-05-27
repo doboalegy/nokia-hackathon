@@ -54,7 +54,7 @@ class Maze:
 # Az útvesztöket ebben a szótárban tároljuk
 mazes = {}
 
-with open('./input.txt', 'r') as f:
+with open('./maze_solver/input.txt', 'r') as f:
     key = ''
     matrix = []
 
